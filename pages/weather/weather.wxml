@@ -1,0 +1,13 @@
+<!-- pages/weather/weather.wxml -->
+<view>
+    <l-card type="cover" image="/image/weather.png" title="小李同学的天气播报">
+        <view class="content">
+            <l-list title="日期：" right-desc="{{weather.date}} {{weather.week}}" icon="like" icon-color="red" is-link="{{false}}" />
+            <l-list title="地区：" right-desc="{{weather.area}}" icon="like" icon-color="red" is-link="{{false}}" />
+            <l-list title="天气：" right-desc="{{weather.wea}}" icon="like" icon-color="red" is-link="{{false}}" />
+            <l-list title="气温：" right-desc="{{weather.tem}} ℃" icon="like" icon-color="red" is-link="{{false}}" />
+            <l-list title="日间气温：" right-desc="{{weather.tem_day}} ℃" icon="like" icon-color="red" is-link="{{false}}" />
+            <l-list title="夜间气温：" right-desc="{{weather.tem_night}} ℃" icon="like" icon-color="red" is-link="{{false}}" />
+        </view>
+    </l-card>
+</view>

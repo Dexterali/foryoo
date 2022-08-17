@@ -1,0 +1,32 @@
+<!-- index.wxml -->
+<view class="container">
+    <l-card type="cover" 
+            image="/image/bg.png"
+            title="小李同学的每日播报"
+			>
+        <view class="content">
+			<l-list title="日期：" right-desc="{{showInfo.date}}" icon="like" icon-color="red" is-link="{{false}}"/>
+			<l-list title="城市：" right-desc="{{showInfo.city}}" icon="like" icon-color="red" is-link="{{false}}"/>
+			<!-- <l-list title="天气：" right-desc="{{showInfo.weather.wea}}" icon="like" icon-color="red" is-link="{{true}}" link-type="{{navigateTo}}" url="../weather/weather"/> -->
+			<l-list title="天气：" icon="like" icon-color="red" is-link="{{true}}" bind:lintap="goWeather" />
+			<!-- right-desc="{{showInfo.love_date}}天" -->
+			<l-list title="恋爱第：" right-desc="{{showInfo.love_date}} 天" icon="like" icon-color="red" is-link="{{false}}"/>
+			<l-list title="距离小宝生日还有：" right-desc="{{showInfo.birthday}} 天" icon="like" icon-color="red" is-link="{{false}}"/>
+
+			<view>
+				<l-list desc="每日一句" is-link="{{false}}">
+					<view slot="right-section">
+						<text>作者：{{showInfo.foryoo.author}}</text>
+					</view>
+				</l-list>
+				<l-list is-link="{{false}}">
+					<view slot="left-section">
+						<text>{{showInfo.foryoo.content}}</text>
+					</view>
+				</l-list>
+			</view>
+        </view>
+    </l-card>
+
+
+</view>
